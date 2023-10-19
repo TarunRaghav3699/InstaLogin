@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Instagram</title>
+  <link rel="icon" href="Instagram_logo_2016.svg.webp" type="image/x-icon">
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="color">
+  <div class="container">
+    <h1 class="insta_font">
+      <center>Instagram</center>
+    </h1>
+    <form class="user-input">
+      <center>
+        <input class="handle" type="text" placeholder="Phone number, username or email" id="id_username"><br>
+
+        <input class="password" type="password" placeholder="Password" id="id_password">
+
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20210917150049/eyeslash-300x240.png" width="5%"
+          height="6%" style="margin-left: -7%; display:inline; vertical-align: middle" id="togglePassword">
+        <br><br>
+      </center>
+
+      <right id="center"><button class="forgot_Password" type="submit"><b>Forgot password?</b></button></right><br><br>
+
+      <center><button class="login" type="submit">Log In</button></center>
+    </form>
+    <h2 class="hr-lines">OR</h2>
+    <a href="https://www.instagram.com/tarunraghav3699" class="login_with_email"><b>Continue as Tarun raghav</b></a>
+  </div>
+</body>
+
+<script>
+  const togglePassword =
+    document.querySelector('#togglePassword');
+
+  const password = document.querySelector('#id_password');
+
+  togglePassword.addEventListener('click', function (e) {
+
+    // Toggle the type attribute 
+    const type = password.getAttribute(
+      'type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+
+    // Toggle the eye slash icon 
+    if (togglePassword.src.match(
+      "https://media.geeksforgeeks.org/wp-content/uploads/20210917150049/eyeslash.png")) {
+      togglePassword.src =
+        "https://media.geeksforgeeks.org/wp-content/uploads/20210917145551/eye.png";
+    } else {
+      togglePassword.src =
+        "https://media.geeksforgeeks.org/wp-content/uploads/20210917150049/eyeslash.png";
+    }
+  }); 
+</script>
+
+</html>
